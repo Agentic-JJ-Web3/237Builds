@@ -56,7 +56,7 @@ To add a new startup to the platform, you can either:
 - **Contact us:** Send the startup details to [237builds@gmail.com](mailto:237builds@gmail.com) or reach out to us on our social media channels.
 - **Contribute via GitHub:**
   1. Open the `index.html` file.
-  2. Locate the `startups` array in the `<script>` section.
+  2. Locate the `startups` array in the `script,js` file.
   3. Add a new startup object to the array, following the existing format:
      ```javascript
      {
@@ -67,7 +67,7 @@ To add a new startup to the platform, you can either:
          startDate: "YYYY",
          description: "A brief description of your startup.",
          website: "https://your-startup-website.com",
-         logo: "URL to your startup's logo"
+         logo: "URL to your startup's logo "
      }
      ```
   4. Create a pull request with your changes.

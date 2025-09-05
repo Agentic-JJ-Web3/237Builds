@@ -1,0 +1,211 @@
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
+        }
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%);
+        }
+        .search-focus {
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.3);
+        }
+        .startup-card {
+            transition: all 0.3s ease;
+        }
+        .startup-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .logo-container {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .dark .logo-container {
+            background: linear-gradient(135deg, #374151, #4b5563);
+        }
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+        .form-slide-in {
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth Page Load Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.2s forwards;
+        }
+
+        .fade-in-delay-2 {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.4s forwards;
+        }
+
+        .fade-in-delay-3 {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.6s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced smooth scrolling for all elements */
+        * {
+            scroll-behavior: smooth;
+        }
+
+        /* Ultra smooth scrolling with easing */
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 2rem;
+            }
+        }
+
+        /* Smooth transitions for all interactive elements */
+        button, a, input, .startup-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Continuous Logo Scroll */
+        .logos-scroll {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+
+        .logos-slide {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            min-width: 100%;
+        }
+
+        .logo-item {
+            font-size: 3rem;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .logo-item:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Circuit Animation Styles */
+        .circuit-search {
+            position: relative;
+            background: white;
+            border: 1px solid transparent;
+            border-radius: 50px;
+            background-clip: padding-box;
+        }
+
+        .circuit-search::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(45deg, 
+                #ff0080, #ff8c00, #40e0d0, #ff0080, 
+                #9400d3, #00ff00, #ff1493, #00bfff,
+                #ff0080, #ff8c00, #40e0d0);
+            background-size: 400% 400%;
+            border-radius: 50px;
+            z-index: -1;
+            animation: circuitFlow 3s ease-in-out infinite;
+        }
+
+        @keyframes circuitFlow {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 100% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            75% {
+                background-position: 0% 100%;
+            }
+        }
+
+        .circuit-search input {
+            background: transparent;
+            border: none;
+            color: #374151;
+            position: relative;
+            z-index: 1;
+        }
+
+        .circuit-search input::placeholder {
+            color: #6b7280;
+        }
+
+        .circuit-search input:focus {
+            outline: none;
+            box-shadow: 0 0 30px rgba(64, 224, 208, 0.2);
+        }
+
+        .circuit-button {
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            border: none;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .circuit-button:hover {
+            background: linear-gradient(45deg, #00d4ff, #ff0080);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+    

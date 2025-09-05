@@ -6,183 +6,10 @@
     <title>CameroonBuilds - Discover Local Tech Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
-        }
-        .dark .gradient-bg {
-            background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%);
-        }
-        .search-focus {
-            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.3);
-        }
-        .startup-card {
-            transition: all 0.3s ease;
-        }
-        .startup-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .logo-container {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .dark .logo-container {
-            background: linear-gradient(135deg, #374151, #4b5563);
-        }
-        .modal-overlay {
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-        }
-        .form-slide-in {
-            animation: slideIn 0.3s ease-out;
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Smooth Page Load Animations */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        .fade-in-delay-1 {
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out 0.2s forwards;
-        }
-
-        .fade-in-delay-2 {
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out 0.4s forwards;
-        }
-
-        .fade-in-delay-3 {
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out 0.6s forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Enhanced smooth scrolling for all elements */
-        * {
-            scroll-behavior: smooth;
-        }
-
-        /* Ultra smooth scrolling with easing */
-        @media (prefers-reduced-motion: no-preference) {
-            html {
-                scroll-behavior: smooth;
-                scroll-padding-top: 2rem;
-            }
-        }
-
-        /* Smooth transitions for all interactive elements */
-        button, a, input, .startup-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Circuit Animation Styles */
-        .circuit-search {
-            position: relative;
-            background: white;
-            border: 1px solid transparent;
-            border-radius: 50px;
-            background-clip: padding-box;
-        }
-
-        .circuit-search::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: -1px;
-            right: -1px;
-            bottom: -1px;
-            background: linear-gradient(45deg, 
-                #ff0080, #ff8c00, #40e0d0, #ff0080, 
-                #9400d3, #00ff00, #ff1493, #00bfff,
-                #ff0080, #ff8c00, #40e0d0);
-            background-size: 400% 400%;
-            border-radius: 50px;
-            z-index: -1;
-            animation: circuitFlow 3s ease-in-out infinite;
-        }
-
-        @keyframes circuitFlow {
-            0%, 100% {
-                background-position: 0% 50%;
-            }
-            25% {
-                background-position: 100% 0%;
-            }
-            50% {
-                background-position: 100% 100%;
-            }
-            75% {
-                background-position: 0% 100%;
-            }
-        }
-
-        .circuit-search input {
-            background: transparent;
-            border: none;
-            color: #374151;
-            position: relative;
-            z-index: 1;
-        }
-
-        .circuit-search input::placeholder {
-            color: #6b7280;
-        }
-
-        .circuit-search input:focus {
-            outline: none;
-            box-shadow: 0 0 30px rgba(64, 224, 208, 0.2);
-        }
-
-        .circuit-button {
-            background: linear-gradient(45deg, #00ff88, #00d4ff);
-            border: none;
-            position: relative;
-            z-index: 2;
-            transition: all 0.3s ease;
-        }
-
-        .circuit-button:hover {
-            background: linear-gradient(45deg, #00d4ff, #ff0080);
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Discover and support innovative tech solutions built in Cameroon. Find startups solving real problems in health, education, agriculture, transport and more.">
+    <meta name="keywords" content="Cameroon, startups, tech solutions, innovation, health apps, education technology, agriculture tech, transport solutions, fintech, ecommerce, local startups">
+    <meta name="author" content="237Builds">
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300" style="scroll-behavior: smooth;">
     <!-- Header -->
@@ -276,6 +103,76 @@
 
 
 
+    <!-- Partners Section -->
+    <section class="bg-white dark:bg-gray-900 py-16 border-t dark:border-gray-700 transition-colors duration-300 overflow-hidden">
+        <div class="logos-scroll">
+            <div class="logos-slide">
+                <a href="https://microsoft.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=160&h=100&fit=crop&crop=center" alt="Tech Company" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://google.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=160&h=100&fit=crop&crop=center" alt="Startup Logo" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://techstars.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?w=160&h=100&fit=crop&crop=center" alt="Innovation Hub" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://aws.amazon.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=160&h=100&fit=crop&crop=center" alt="Tech Solutions" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://stripe.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=160&h=100&fit=crop&crop=center" alt="Digital Agency" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://salesforce.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=160&h=100&fit=crop&crop=center" alt="Corporate Partner" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://shopify.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=160&h=100&fit=crop&crop=center" alt="Business Hub" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://ycombinator.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=160&h=100&fit=crop&crop=center" alt="Tech Incubator" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://github.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=160&h=100&fit=crop&crop=center" alt="Innovation Lab" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://slack.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=160&h=100&fit=crop&crop=center" alt="Development Studio" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+            </div>
+            <div class="logos-slide">
+                <a href="https://microsoft.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=160&h=100&fit=crop&crop=center" alt="Tech Company" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://google.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=160&h=100&fit=crop&crop=center" alt="Startup Logo" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://techstars.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?w=160&h=100&fit=crop&crop=center" alt="Innovation Hub" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://aws.amazon.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=160&h=100&fit=crop&crop=center" alt="Tech Solutions" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://stripe.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=160&h=100&fit=crop&crop=center" alt="Digital Agency" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://salesforce.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=160&h=100&fit=crop&crop=center" alt="Corporate Partner" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://shopify.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=160&h=100&fit=crop&crop=center" alt="Business Hub" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://ycombinator.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=160&h=100&fit=crop&crop=center" alt="Tech Incubator" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://github.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=160&h=100&fit=crop&crop=center" alt="Innovation Lab" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+                <a href="https://slack.com" target="_blank" class="logo-item">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=160&h=100&fit=crop&crop=center" alt="Development Studio" class="w-32 h-20 object-contain" onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Add Startup CTA -->
     <section class="bg-green-50 dark:bg-gray-800 border-t dark:border-gray-700 transition-colors duration-300">
         <div class="container mx-auto px-4 py-12">
@@ -300,8 +197,8 @@
                         <div class="flex gap-2">
                             <!-- <a href="https://twitter.com/237builds" target="_blank" class="flex-1 bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-full font-semibold transition-colors">
                                 <i class="fab fa-x-twitter mr-2"></i>X
-                            </a> -->
-                            <!-- <a href="https://linkedin.com/company/237builds" target="_blank" class="flex-1 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-full font-semibold transition-colors">
+                            </a>
+                            <a href="https://linkedin.com/company/237builds" target="_blank" class="flex-1 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-full font-semibold transition-colors">
                                 <i class="fab fa-linkedin mr-2"></i>LinkedIn
                             </a> -->
                         </div>
@@ -368,318 +265,21 @@
                         <a href="https://github.com" target="_blank" class="text-green-400 hover:text-green-300 transition-colors">Open Source</a>
                     </p>
                     <div class="flex space-x-4">
-                        <span class="text-gray-400">Follow the movement:</span>
+                        <!-- <span class="text-gray-400">Follow the movement:</span> -->
                         <!-- <a href="#" class="text-gray-400 hover:text-green-400 transition-colors">
                             <i class="fab fa-x-twitter mr-1"></i>X
                         </a>
                         <a href="#" class="text-gray-400 hover:text-green-400 transition-colors">
                             <i class="fab fa-linkedin mr-1"></i>LinkedIn
                         </a> -->
-                        <a href="https://github.com/Agentic-JJ-Web3/237Builds.git" class="text-gray-400 hover:text-green-400 transition-colors">
+                        <!-- <a href="" class="text-gray-400 hover:text-green-400 transition-colors">
                             <i class="fab fa-github mr-1"></i>GitHub
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Sample startup data - this would come from your pgAdmin database
-        const startups = [
-            {
-                id: 1,
-                name: "MediCam",
-                category: "health",
-                location: "Yaoundé",
-                startDate: "2023",
-                description: "Telemedicine platform connecting patients with doctors across Cameroon. Book appointments, get prescriptions, and access medical records.",
-                website: "https://medicam.cm",
-                logo: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 2,
-                name: "EduLearn CM",
-                category: "education",
-                location: "Douala",
-                startDate: "2022",
-                description: "Online learning platform offering courses in French and English. Focuses on technical skills and university preparation.",
-                website: "https://edulearn.cm",
-                logo: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 3,
-                name: "FarmTech Cameroon",
-                category: "agriculture",
-                location: "Bamenda",
-                startDate: "2023",
-                description: "Smart farming solutions helping farmers optimize crop yields using weather data and soil analysis.",
-                website: "https://farmtech.cm",
-                logo: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 4,
-                name: "CamerRide",
-                category: "transport",
-                location: "Yaoundé",
-                startDate: "2022",
-                description: "Ride-sharing app designed for Cameroonian cities. Safe, affordable transportation with local payment methods.",
-                website: "https://camerride.cm",
-                logo: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 5,
-                name: "PayCamer",
-                category: "fintech",
-                location: "Douala",
-                startDate: "2021",
-                description: "Mobile money solution integrating with local banks. Send money, pay bills, and manage finances easily.",
-                website: "https://paycamer.cm",
-                logo: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 6,
-                name: "MarketPlace CM",
-                category: "ecommerce",
-                location: "Bamenda",
-                startDate: "2023",
-                description: "E-commerce platform for local businesses. Buy and sell products made in Cameroon with local delivery.",
-                website: "https://marketplace.cm",
-                logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 7,
-                name: "HealthTracker CM",
-                category: "health",
-                location: "Douala",
-                startDate: "2022",
-                description: "Personal health monitoring app with medication reminders and health tips in local languages.",
-                website: "https://healthtracker.cm",
-                logo: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 8,
-                name: "SkillUp Cameroon",
-                category: "education",
-                location: "Yaoundé",
-                startDate: "2023",
-                description: "Professional development platform offering coding bootcamps and digital marketing courses.",
-                website: "https://skillup.cm",
-                logo: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 9,
-                name: "AgriMarket CM",
-                category: "agriculture",
-                location: "Bafoussam",
-                startDate: "2022",
-                description: "Digital marketplace connecting farmers directly with buyers. Fair prices and reduced middleman costs.",
-                website: "https://agrimarket.cm",
-                logo: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 10,
-                name: "BusTracker CM",
-                category: "transport",
-                location: "Douala",
-                startDate: "2023",
-                description: "Real-time bus tracking for public transportation in major Cameroonian cities.",
-                website: "https://bustracker.cm",
-                logo: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 11,
-                name: "CamerPay",
-                category: "fintech",
-                location: "Yaoundé",
-                startDate: "2021",
-                description: "Digital wallet supporting multiple currencies including CFA Franc. Secure and fast transactions.",
-                website: "https://camerpay.cm",
-                logo: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=100&h=100&fit=crop&crop=center"
-            },
-            {
-                id: 12,
-                name: "LocalShop CM",
-                category: "ecommerce",
-                location: "Bamenda",
-                startDate: "2023",
-                description: "Support local artisans and craftspeople by buying authentic Cameroonian products online.",
-                website: "https://localshop.cm",
-                logo: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=100&h=100&fit=crop&crop=center"
-            }
-        ];
-
-        let filteredStartups = [...startups];
-
-        // DOM elements
-        const searchInput = document.getElementById('searchInput');
-        const startupsGrid = document.getElementById('startupsGrid');
-        const noResults = document.getElementById('noResults');
-        const resultsCounter = document.getElementById('resultsCounter');
-        const categoryFilters = document.querySelectorAll('.category-filter');
-
-        // Initialize the page
-        function init() {
-            renderStartups(filteredStartups);
-            setupEventListeners();
-        }
-
-        // Setup event listeners
-        function setupEventListeners() {
-            // Search input
-            searchInput.addEventListener('input', handleSearch);
-            searchInput.addEventListener('focus', function() {
-                this.classList.add('search-focus');
-            });
-            searchInput.addEventListener('blur', function() {
-                this.classList.remove('search-focus');
-            });
-
-            // Category filters
-            categoryFilters.forEach(filter => {
-                filter.addEventListener('click', handleCategoryFilter);
-            });
-        }
-
-        // Handle search functionality
-        function handleSearch() {
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            
-            if (searchTerm === '') {
-                filteredStartups = [...startups];
-            } else {
-                filteredStartups = startups.filter(startup => 
-                    startup.name.toLowerCase().includes(searchTerm) ||
-                    startup.description.toLowerCase().includes(searchTerm) ||
-                    startup.category.toLowerCase().includes(searchTerm) ||
-                    startup.location.toLowerCase().includes(searchTerm)
-                );
-            }
-            
-            renderStartups(filteredStartups);
-        }
-
-        // Handle category filtering
-        function handleCategoryFilter(e) {
-            const category = e.target.dataset.category;
-            
-            // Update active filter button
-            categoryFilters.forEach(filter => {
-                filter.classList.remove('active', 'bg-green-600', 'text-white');
-                filter.classList.add('bg-gray-200', 'text-gray-700');
-            });
-            
-            e.target.classList.add('active', 'bg-green-600', 'text-white');
-            e.target.classList.remove('bg-gray-200', 'text-gray-700');
-            
-            // Filter startups
-            if (category === 'all') {
-                filteredStartups = [...startups];
-            } else {
-                filteredStartups = startups.filter(startup => startup.category === category);
-            }
-            
-            // Apply search if there's a search term
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            if (searchTerm !== '') {
-                filteredStartups = filteredStartups.filter(startup => 
-                    startup.name.toLowerCase().includes(searchTerm) ||
-                    startup.description.toLowerCase().includes(searchTerm) ||
-                    startup.category.toLowerCase().includes(searchTerm) ||
-                    startup.location.toLowerCase().includes(searchTerm)
-                );
-            }
-            
-            renderStartups(filteredStartups);
-        }
-
-        // Render startup cards
-        function renderStartups(startupsToRender) {
-            // Update results counter
-            resultsCounter.innerHTML = `Showing <span class="font-semibold text-green-600">${startupsToRender.length}</span> Cameroonian startup${startupsToRender.length !== 1 ? 's' : ''}`;
-            
-            if (startupsToRender.length === 0) {
-                startupsGrid.classList.add('hidden');
-                noResults.classList.remove('hidden');
-                return;
-            }
-            
-            startupsGrid.classList.remove('hidden');
-            noResults.classList.add('hidden');
-            
-            startupsGrid.innerHTML = startupsToRender.map(startup => `
-                <div class="startup-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 transition-colors duration-300">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="logo-container">
-                                <img src="${startup.logo}" alt="${startup.name} logo" class="w-full h-full object-cover rounded-2xl" 
-                                     onerror="this.src=''; this.alt='Logo failed to load'; this.style.display='none';">
-                            </div>
-                            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm font-medium px-3 py-1 rounded-full">
-                                ${startup.category.charAt(0).toUpperCase() + startup.category.slice(1)}
-                            </span>
-                        </div>
-                        
-                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">${startup.name}</h3>
-                        
-                        <div class="flex items-center text-gray-600 dark:text-gray-400 text-sm mb-3">
-                            <span class="mr-4">📍 ${startup.location}</span>
-                            <span>📅 ${startup.startDate}</span>
-                        </div>
-                        
-                        <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">${startup.description}</p>
-                        
-                        <div class="flex items-center justify-between">
-                            <a href="${startup.website}" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                                Visit Website →
-                            </a>
-                            <button onclick="shareStartup('${startup.name}', '${startup.website}')" class="text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                                📤 Share
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        // Clear search function
-        function clearSearch() {
-            searchInput.value = '';
-            filteredStartups = [...startups];
-            
-            // Reset category filter to "All"
-            categoryFilters.forEach(filter => {
-                filter.classList.remove('active', 'bg-green-600', 'text-white');
-                filter.classList.add('bg-gray-200', 'text-gray-700');
-            });
-            
-            document.querySelector('[data-category="all"]').classList.add('active', 'bg-green-600', 'text-white');
-            document.querySelector('[data-category="all"]').classList.remove('bg-gray-200', 'text-gray-700');
-            
-            renderStartups(filteredStartups);
-        }
-
-        // Share startup function
-        function shareStartup(name, website) {
-            if (navigator.share) {
-                navigator.share({
-                    title: `Check out ${name} on 237Builds`,
-                    text: `Discover this amazing Cameroonian startup: ${name}`,
-                    url: website
-                });
-            } else {
-                // Fallback for browsers that don't support Web Share API
-                const shareText = `Check out ${name} - a Cameroonian startup! ${website} #237Builds`;
-                navigator.clipboard.writeText(shareText).then(() => {
-                    alert('Startup info copied to clipboard! Share it with your friends.');
-                });
-            }
-        }
-
-
-
-        // Initialize the application
-        init();
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a8caa22609bee4',t:'MTc1NzEwNzQ0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script src="script.js"></script>
+</body>
 </html>
