@@ -55,6 +55,61 @@
             }
         }
 
+        /* Smooth Page Load Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .fade-in-delay-1 {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.2s forwards;
+        }
+
+        .fade-in-delay-2 {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.4s forwards;
+        }
+
+        .fade-in-delay-3 {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.6s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced smooth scrolling for all elements */
+        * {
+            scroll-behavior: smooth;
+        }
+
+        /* Ultra smooth scrolling with easing */
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 2rem;
+            }
+        }
+
+        /* Smooth transitions for all interactive elements */
+        button, a, input, .startup-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         /* Circuit Animation Styles */
         .circuit-search {
             position: relative;
@@ -131,12 +186,12 @@
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300" style="scroll-behavior: smooth;">
     <!-- Header -->
-    <header class="gradient-bg text-white relative" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&h=800&fit=crop&crop=center'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <header class="gradient-bg text-white relative fade-in" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&h=800&fit=crop&crop=center'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="absolute inset-0 bg-black bg-opacity-70"></div>
         <div class="container mx-auto px-4 py-8 relative z-10">
 
             
-                <div class="text-center mb-8">
+                <div class="text-center mb-8 fade-in-delay-1">
                     <div class="flex items-center justify-center mb-6">
                         <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-4 mr-4">
                             <span class="text-4xl">🇨🇲</span>
@@ -150,7 +205,7 @@
             </div>
             
             <!-- Main Search Bar -->
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-4xl mx-auto fade-in-delay-2">
                 <div class="circuit-search relative">
                     <input 
                         type="text" 
@@ -167,7 +222,7 @@
     </header>
 
     <!-- Filter Categories -->
-    <section class="bg-white dark:bg-gray-800 shadow-sm border-b dark:border-gray-700 transition-colors duration-300">
+    <section class="bg-white dark:bg-gray-800 shadow-sm border-b dark:border-gray-700 transition-colors duration-300 fade-in-delay-3">
         <div class="container mx-auto px-4 py-6">
             <div class="flex flex-wrap justify-center gap-3">
                 <button class="category-filter active bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors" data-category="all">
@@ -196,14 +251,14 @@
     </section>
 
     <!-- Results Counter -->
-    <section class="container mx-auto px-4 py-4">
+    <section class="container mx-auto px-4 py-4 fade-in-delay-3">
         <div class="text-center">
             <p id="resultsCounter" class="text-gray-600 dark:text-gray-300 text-lg transition-colors duration-300">Showing <span class="font-semibold text-green-600">12</span> Cameroonian startups</p>
         </div>
     </section>
 
     <!-- Startup Grid -->
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 py-8 fade-in-delay-3">
         <div id="startupsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Startup cards will be populated by JavaScript -->
         </div>
@@ -261,7 +316,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Contribute via GitHub</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6">Developers can contribute directly by submitting a pull request to our open-source repository.</p>
-                    <a href="https://github.com/cameroonbuilds/platform" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-full font-semibold transition-colors shadow-lg w-full inline-block">
+                    <a href="https://github.com/Agentic-JJ-Web3/237Builds.git" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-full font-semibold transition-colors shadow-lg w-full inline-block">
                         <i class="fab fa-github mr-2"></i>GitHub Repository
                     </a>
                     <p class="text-sm text-gray-500 dark:text-gray-400 mt-3">✓ Direct contribution<br>✓ Open source community</p>
@@ -626,5 +681,5 @@
         // Initialize the application
         init();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a7ddec3437cd39',t:'MTc1NzA5Nzc1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97a8caa22609bee4',t:'MTc1NzEwNzQ0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
