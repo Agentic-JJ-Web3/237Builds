@@ -55,21 +55,21 @@ To add a new startup to the platform, you can either:
 
 - **Contact us:** Send the startup details to [237builds@gmail.com](mailto:237builds@gmail.com) or reach out to us on our social media channels.
 - **Contribute via GitHub:**
-  1. Open the `index.html` file.
-  2. Locate the `startups` array in the `script,js` file.
-  3. Add a new startup object to the array, following the existing format:
-     ```javascript
+  1. Open the `data/companies.json` file.
+  2. Add a new startup object to the JSON array, following the existing format:
+     ```json
      {
-         id: 13, // Make sure to use a unique ID
-         name: "Your Startup Name",
-         category: "Your Category", // e.g., "health", "education", etc.
-         location: "City, Cameroon",
-         startDate: "YYYY",
-         description: "A brief description of your startup.",
-         website: "https://your-startup-website.com",
-         logo: "URL to your startup's logo "
+         "id": 13, // Make sure to use a unique ID
+         "name": "Your Startup Name",
+         "category": "Your Category", // e.g., "health", "education", etc.
+         "location": "City, Cameroon",
+         "startDate": "YYYY",
+         "description": "A brief description of your startup.",
+         "website": "https://your-startup-website.com",
+         "logo": "URL to your startup's logo"
      }
      ```
+  3. Save your changes.
   4. Create a pull request with your changes.
 
 ## License

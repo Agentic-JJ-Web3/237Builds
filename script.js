@@ -1,11 +1,11 @@
     
-        // Sample startup data - this would come from your pgAdmin/supabase database
+       
         // Load startups from JSON
 let startups = [];
 
 async function loadStartups() {
     try {
-        const response = await fetch('./data/companies.json'); // Adjust path as needed
+        const response = await fetch('./data/companies.json');
         startups = await response.json();
         filteredStartups = [...startups];
         init();
