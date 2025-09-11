@@ -1,16 +1,28 @@
-    
-       
-        // Load startups from JSON
+// Load startups from JSON
 let startups = [];
 
 async function loadStartups() {
+    const loadingElement = document.getElementById('loading');
+    const startupsGrid = document.getElementById('startupsGrid');
+
     try {
+        // Show the loading state
+        loadingElement.classList.remove('hidden');
+        startupsGrid.classList.add('hidden');
+
+        // Fetch the startup data
         const response = await fetch('./data/companies.json');
         startups = await response.json();
         filteredStartups = [...startups];
-        init();
+
+        // Render the startups
+        renderStartups(filteredStartups);
     } catch (error) {
         console.error('Failed to load startups:', error);
+    } finally {
+        // Hide the loading state
+        loadingElement.classList.add('hidden');
+        startupsGrid.classList.remove('hidden');
     }
 }
 

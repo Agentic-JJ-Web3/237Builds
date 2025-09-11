@@ -86,8 +86,8 @@
 
     <!-- Startup Grid -->
     <main class="container mx-auto px-4 py-8 fade-in-delay-3">
-        <div id="startupsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Startup cards will be populated by JavaScript -->
+        <div id="startupsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            <!-- Startup cards will be rendered here -->
         </div>
 
         <!-- No Results Message -->
@@ -98,6 +98,11 @@
             <button onclick="clearSearch()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition-colors">
                 Show All Startups
             </button>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="hidden text-center text-gray-500 mt-10">
+            <p>Loading startups...</p>
         </div>
     </main>
 
