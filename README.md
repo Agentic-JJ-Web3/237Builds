@@ -59,7 +59,7 @@ To add a new startup to the platform, you can either:
   2. Add a new startup object to the JSON array, following the existing format:
      ```json
      {
-         "id": 13, // Make sure to use a unique ID
+         "id": 1, // Make sure to use a unique ID
          "name": "Your Startup Name",
          "category": "Your Category", // e.g., "heltech", "edtech","agritech" etc.
          "location": "City, Cameroon",
