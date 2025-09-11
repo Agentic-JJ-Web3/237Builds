@@ -16,7 +16,7 @@ Welcome to 237Builds, a platform dedicated to showcasing and discovering amazing
 
 The project is built with HTML, Tailwind CSS, and vanilla JavaScript. It's designed to be a community-driven platform where developers can contribute and help grow the ecosystem of Cameroonian tech.
 
-**Live Website:** [237-builds.vercel.app](https://237-builds.vercel.app)
+**Live Website:** [237-builds.vercel.app](https://237-builds.netlify.app)
 
 ## Getting Started
 
