@@ -1,122 +1,255 @@
 [
+
     {
         "id": 1,
-        "name": "MediCam",
-        "category": "health",
-        "location": "Yaoundé",
-        "startDate": "2023",
-        "description": "Telemedicine platform connecting patients with doctors across Cameroon. Book appointments, get prescriptions, and access medical records.",
-        "website": "https://medicam.cm",
-        "logo": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=100&h=100&fit=crop&crop=center"
+        "name": "Freshbag",
+        "category": "agritech",
+        "location": "Yaounde",
+        "startDate": "2019",
+        "description": "A digital marketplace and distribution platform connecting small-scale farmers to customers across Cameroon.",
+        "website": "https://freshbag.shop",
+        "logo": "https://source.unsplash.com/100x100/?farmersmarket"
     },
     {
         "id": 2,
-        "name": "EduLearn CM",
-        "category": "education",
-        "location": "Douala",
-        "startDate": "2022",
-        "description": "Online learning platform offering courses in French and English. Focuses on technical skills and university preparation.",
-        "website": "https://edulearn.cm",
-        "logo": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=100&h=100&fit=crop&crop=center"
+        "name": "Aleigro Online Shopping Mall",
+        "category": "ecommerce",
+        "location": "Buea",
+        "startDate": "2020",
+        "description": "Cameroon’s first online shopping mall, aggregating products from multiple local merchants into one app for consumers.",
+        "website": "https://aleigro.com",
+        "logo": "https://source.unsplash.com/100x100/?shoppingmall"
     },
     {
         "id": 3,
-        "name": "FarmTech Cameroon",
-        "category": "agriculture",
-        "location": "Bamenda",
-        "startDate": "2023",
-        "description": "Smart farming solutions helping farmers optimize crop yields using weather data and soil analysis.",
-        "website": "https://farmtech.cm",
-        "logo": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=100&h=100&fit=crop&crop=center"
+        "name": "Findie",
+        "category": "edtech",
+        "location": "Buea",
+        "startDate": "2020",
+        "description": "A mobile app for University of Buea students to navigate campus and access important academic information and locations.",
+        "website": "https://findieub.web.app",
+        "logo": "https://source.unsplash.com/100x100/?students"
     },
     {
         "id": 4,
-        "name": "CamerRide",
-        "category": "transport",
-        "location": "Yaoundé",
-        "startDate": "2022",
-        "description": "Ride-sharing app designed for Cameroonian cities. Safe, affordable transportation with local payment methods.",
-        "website": "https://camerride.cm",
-        "logo": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=100&h=100&fit=crop&crop=center"
+        "name": "Concour Guide CMR",
+        "category": "edtech",
+        "location": "Buea",
+        "startDate": "2020",
+        "description": "An educational app providing past entrance exam questions and career guidance to help Cameroonian students prepare for competitive exams.",
+        "website": "https://concourguide-cmr.web.app",
+        "logo": "https://source.unsplash.com/100x100/?exam"
     },
     {
         "id": 5,
-        "name": "PayCamer",
-        "category": "fintech",
-        "location": "Douala",
-        "startDate": "2021",
-        "description": "Mobile money solution integrating with local banks. Send money, pay bills, and manage finances easily.",
-        "website": "https://paycamer.cm",
-        "logo": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=100&h=100&fit=crop&crop=center"
+        "name": "Digolearn",
+        "category": "edtech",
+        "location": "Buea",
+        "startDate": "2020",
+        "description": "An online learning platform offering virtual schooling tools, school management software, and an academic community for schools and students.",
+        "website": "https://digolearn.com",
+        "logo": "https://source.unsplash.com/100x100/?education"
     },
     {
         "id": 6,
-        "name": "MarketPlace CM",
-        "category": "ecommerce",
-        "location": "Bamenda",
-        "startDate": "2023",
-        "description": "E-commerce platform for local businesses. Buy and sell products made in Cameroon with local delivery.",
-        "website": "https://marketplace.cm",
-        "logo": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&h=100&fit=crop&crop=center"
+        "name": "Quesers",
+        "category": "edtech",
+        "location": "Buea",
+        "startDate": "2021",
+        "description": "An app where students access past exam questions and answers, and contributors can earn money by uploading authentic study materials.",
+        "website": "https://www.quesers.org",
+        "logo": "https://source.unsplash.com/100x100/?books"
     },
     {
         "id": 7,
-        "name": "HealthTracker CM",
-        "category": "health",
-        "location": "Douala",
-        "startDate": "2022",
-        "description": "Personal health monitoring app with medication reminders and health tips in local languages.",
-        "website": "https://healthtracker.cm",
-        "logo": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=100&h=100&fit=crop&crop=center"
+        "name": "Data Girl Technologies",
+        "category": "edtech",
+        "location": "Buea",
+        "startDate": "2020",
+        "description": "A tech education initiative providing coding bootcamps, mentorship, and networking to empower young women and girls in Cameroon in STEM fields.",
+        "website": "https://datagirltech.com",
+        "logo": "https://source.unsplash.com/100x100/?woman"
     },
     {
         "id": 8,
-        "name": "SkillUp Cameroon",
-        "category": "education",
-        "location": "Yaoundé",
-        "startDate": "2023",
-        "description": "Professional development platform offering coding bootcamps and digital marketing courses.",
-        "website": "https://skillup.cm",
-        "logo": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=100&h=100&fit=crop&crop=center"
+        "name": "Ejara",
+        "category": "fintech",
+        "location": "Douala",
+        "startDate": "2020",
+        "description": "A mobile investment platform enabling users to invest via their mobile money account in crypto and stocks, with interest-bearing savings plans.",
+        "website": "https://ejara.io",
+        "logo": "https://source.unsplash.com/100x100/?finance"
     },
     {
         "id": 9,
-        "name": "AgriMarket CM",
-        "category": "agriculture",
-        "location": "Bafoussam",
-        "startDate": "2022",
-        "description": "Digital marketplace connecting farmers directly with buyers. Fair prices and reduced middleman costs.",
-        "website": "https://agrimarket.cm",
-        "logo": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=100&h=100&fit=crop&crop=center"
+        "name": "PaySika",
+        "category": "fintech",
+        "location": "Douala",
+        "startDate": "2020",
+        "description": "A neo-bank service operating through messaging platforms, offering free accounts and virtual cards with no fees or minimum balance requirements.",
+        "website": "https://www.paysika.com",
+        "logo": "https://source.unsplash.com/100x100/?banking"
     },
     {
         "id": 10,
-        "name": "BusTracker CM",
-        "category": "transport",
-        "location": "Douala",
-        "startDate": "2023",
-        "description": "Real-time bus tracking for public transportation in major Cameroonian cities.",
-        "website": "https://bustracker.cm",
-        "logo": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=100&h=100&fit=crop&crop=center"
+        "name": "Nkwa",
+        "category": "fintech",
+        "location": "Buea",
+        "startDate": "2020",
+        "description": "A licensed savings app helping users set and achieve financial goals with features like goal reminders and locked savings wallets for future needs.",
+        "website": "https://mynkwa.com",
+        "logo": "https://source.unsplash.com/100x100/?savings"
     },
     {
         "id": 11,
-        "name": "CamerPay",
+        "name": "Bohikor",
         "category": "fintech",
-        "location": "Yaoundé",
-        "startDate": "2021",
-        "description": "Digital wallet supporting multiple currencies including CFA Franc. Secure and fast transactions.",
-        "website": "https://camerpay.cm",
-        "logo": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=100&h=100&fit=crop&crop=center"
+        "location": "Buea",
+        "startDate": "2020",
+        "description": "A personal finance mobile app that teaches budgeting and expense tracking to salary earners, helping them manage and optimize their spending habits.",
+        "website": "https://bohikor.com",
+        "logo": "https://source.unsplash.com/100x100/?budgeting"
     },
     {
         "id": 12,
-        "name": "LocalShop CM",
-        "category": "ecommerce",
-        "location": "Bamenda",
+        "name": "Swychr",
+        "category": "fintech",
+        "location": "London",
+        "startDate": "2022",
+        "description": "A blockchain-powered mobile wallet enabling free, instant peer-to-peer money transfers worldwide, along with merchant and multicurrency features.",
+        "website": "https://swychr.com",
+        "logo": "https://source.unsplash.com/100x100/?blockchain"
+    },
+    {
+        "id": 13,
+        "name": "Waspito",
+        "category": "healthtech",
+        "location": "Douala",
+        "startDate": "2020",
+        "description": "A telemedicine app connecting patients with certified doctors for video consultations, digital prescriptions, and access to nearby labs and pharmacies.",
+        "website": "https://www.waspito.com",
+        "logo": "https://source.unsplash.com/100x100/?doctor"
+    },
+    {
+        "id": 14,
+        "name": "Zitopay",
+        "category": "fintech",
+        "location": "Limbe",
+        "startDate": "2020",
+        "description": "An online payment gateway and marketplace simplifying payments for businesses of all sizes, enabling multi-channel transactions via web, WhatsApp, or SMS.",
+        "website": "https://zitopay.africa",
+        "logo": "https://source.unsplash.com/100x100/?payment"
+    },
+    {
+        "id": 15,
+        "name": "Fapshi",
+        "category": "fintech",
+        "location": "Buea",
+        "startDate": "2021",
+        "description": "A payments infrastructure startup offering easy-to-integrate APIs, payment links, and pre-built checkout solutions for websites, apps, and events.",
+        "website": "https://www.fapshi.com",
+        "logo": "https://source.unsplash.com/100x100/?onlinepayment"
+    },
+    {
+        "id": 16,
+        "name": "Campay",
+        "category": "fintech",
+        "location": "Yaounde",
+        "startDate": "2021",
+        "description": "A mobile money gateway enabling Cameroonian businesses to accept MTN and Orange mobile money payments seamlessly, with fast payouts and flexible integration.",
+        "website": "https://www.campay.net",
+        "logo": "https://source.unsplash.com/100x100/?mobilemoney"
+    },
+    {
+        "id": 17,
+        "name": "Traleor",
+        "category": "technology",
+        "location": "Buea",
+        "startDate": "2021",
+        "description": "A no-code website builder for African SMEs and entrepreneurs, allowing users to create and host fully optimized websites without any programming.",
+        "website": "https://traleor.com",
+        "logo": "https://source.unsplash.com/100x100/?website"
+    },
+    {
+        "id": 18,
+        "name": "OnDjoss",
+        "category": "technology",
+        "location": "Yaounde",
+        "startDate": "2019",
+        "description": "A feature-rich messaging app built by Cameroonians, offering free chats, voice messages, group calls, file sharing, and unlimited cloud storage.",
+        "website": "https://www.ondjoss.com",
+        "logo": "https://source.unsplash.com/100x100/?chat"
+    },
+    {
+        "id": 19,
+        "name": "Taaply",
+        "category": "technology",
+        "location": "Douala",
+        "startDate": "2019",
+        "description": "A networking platform that lets users create and exchange digital business cards instantly via NFC, eliminating the need for paper cards.",
+        "website": "https://taaply.com",
+        "logo": "https://source.unsplash.com/100x100/?networking"
+    },
+    {
+        "id": 20,
+        "name": "Gozem",
+        "category": "transport",
+        "location": "Douala",
+        "startDate": "2018",
+        "description": "A regional on-demand super-app offering motorcycle and car rides, as well as food and grocery delivery, primarily serving West and Central African markets.",
+        "website": "https://gozem.co",
+        "logo": "https://source.unsplash.com/100x100/?taxi"
+    },
+    {
+        "id": 21,
+        "name": "Agri Hub Technologies",
+        "category": "agritech",
+        "location": "Buea",
+        "startDate": "2018",
+        "description": "An agri-tech company that bridges farmers with urban buyers, providing improved inputs, training, and farm management solutions to boost productivity.",
+        "website": "https://agrichubtech.com",
+        "logo": "https://source.unsplash.com/100x100/?farmers"
+    },
+    {
+        "id": 22,
+        "name": "AgricFresh",
+        "category": "agritech",
+        "location": "Foumbot",
         "startDate": "2023",
-        "description": "Support local artisans and craftspeople by buying authentic Cameroonian products online.",
-        "website": "https://localshop.cm",
-        "logo": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=100&h=100&fit=crop&crop=center"
+        "description": "Develops solar-powered cold-storage units and an online marketplace to reduce post-harvest losses, improving shelf-life and direct farmer-to-buyer linkages.",
+        "website": "https://agricfresh.cm",
+        "logo": "https://source.unsplash.com/100x100/?farm"
+    },
+    {
+        "id": 23,
+        "name": "AgrixTech",
+        "category": "agritech",
+        "location": "Yaounde",
+        "startDate": "2018",
+        "description": "An AI-powered agritech platform that diagnoses crop diseases from photos and provides sustainable farming advice to help smallholder farmers increase yields.",
+        "website": "https://www.agrixtech.com",
+        "logo": "https://source.unsplash.com/100x100/?drone"
+    },
+    {
+        "id": 24,
+        "name": "Koree",
+        "category": "fintech",
+        "location": "Douala",
+        "startDate": "2022",
+        "description": "A digital wallet app that collects users' spare change from purchases and offers cashback rewards, helping consumers save money effortlessly.",
+        "website": "https://koree.africa",
+        "logo": "https://source.unsplash.com/100x100/?cashback"
+    },
+    {
+        "id": 25,
+        "name": "SMECreditPro",
+        "category": "fintech",
+        "location": "Douala",
+        "startDate": "2018",
+        "description": "A financial services platform offering quick, unsecured business loans and financial products to help African SMEs access working capital rapidly.",
+        "website": "https://smecreditpro.com",
+        "logo": "https://source.unsplash.com/100x100/?loan"
     }
+
+
 ]
