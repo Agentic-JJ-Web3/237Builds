@@ -69,9 +69,10 @@ To add a new startup to the platform, you can either:
          "logo": "URL to your startup's logo"
      }
      ```
-  3. Save your changes.
-  4. Create a pull request with your changes.
+  3. **Uploading a Logo:** If you don't have a URL for your startup's logo, you can upload it for free on [imgbb.com](https://imgbb.com). After uploading, copy the direct link to the image (ensure it ends with `.png`, `.jpg`, or `.jpeg`) and use it as the `logo` value.
+  4. Save your changes.
+  5. Create a pull request with your changes.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
+This project is licensed under the MIT License. 
