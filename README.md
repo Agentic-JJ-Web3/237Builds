@@ -2,7 +2,7 @@
 
 Welcome to 237Builds, a platform dedicated to showcasing and discovering amazing tech solutions built in Cameroon. This project aims to connect Cameroonian innovators with the local community, promoting homegrown talent and solving real-world problems in various sectors.
 
-![237Builds Screenshot](Capture.PNG)
+![237Builds Screenshot](/public/Capture.PNG)
 
 ## About the Project
 
