@@ -12,7 +12,7 @@
      {
     "id": 1,
     "name": "Innovate with SEED",
-    "category": "edtech",
+    "category": "edtech" ,
     "location": "Bamenda",
     "startDate": "2024",
     "description": "Innovate with SEED is a Bamenda-based IT training institute in Cameroon offering hands-on tech education programs, bootcamps, and community events to empower the next generation of African innovators through practical learning.",
@@ -31,16 +31,7 @@
         "logo": "https://i.ibb.co/sdSV0tm0/freshbag.png"
     },
    
-    {
-        "id": 6,
-        "name": "Aleigro Online Shopping Mall",
-        "category": "ecommerce",
-        "location": "Buea",
-        "startDate": "2020",
-        "description": "Cameroon’s first online shopping mall, aggregating products from multiple local merchants into one app for consumers.",
-        "website": "https://aleigro.com",
-        "logo": "https://i.ibb.co/xSDRyQSM/aleigro.png"
-    },
+   
     {
         "id": 3,
         "name": "Findie",
@@ -71,15 +62,15 @@
         "website": "https://digolearn.com",
         "logo": "https://i.ibb.co/39r0pWv0/digolearn.png"
     },
-    {
-        "id": 26,
-        "name": "Quesers",
-        "category": "edtech",
+     {
+        "id": 6,
+        "name": "Aleigro Online Shopping Mall",
+        "category": "ecommerce",
         "location": "Buea",
-        "startDate": "2021",
-        "description": "An app where students access past exam questions and answers, and contributors can earn money by uploading authentic study materials.",
-        "website": "https://www.quesers.org",
-        "logo": "https://source.unsplash.com/100x100/?books"
+        "startDate": "2020",
+        "description": "Cameroon’s first online shopping mall, aggregating products from multiple local merchants into one app for consumers.",
+        "website": "https://aleigro.com",
+        "logo": "https://i.ibb.co/xSDRyQSM/aleigro.png"
     },
     {
         "id": 7,
@@ -179,7 +170,7 @@
         "startDate": "2021",
         "description": "A mobile money gateway enabling Cameroonian businesses to accept MTN and Orange mobile money payments seamlessly, with fast payouts and flexible integration.",
         "website": "https://www.campay.net",
-        "logo": "https://source.unsplash.com/100x100/?mobilemoney"
+        "logo": "https://i.ibb.co/ZRXx4XqS/CamPay.png"
     },
     {
         "id": 17,
@@ -189,7 +180,7 @@
         "startDate": "2021",
         "description": "A no-code website builder for African SMEs and entrepreneurs, allowing users to create and host fully optimized websites without any programming.",
         "website": "https://traleor.com",
-        "logo": "https://source.unsplash.com/100x100/?website"
+        "logo": "https://i.ibb.co/xtxQ1Lhp/traleor.png"
     },
     {
         "id": 18,
@@ -199,7 +190,7 @@
         "startDate": "2019",
         "description": "A feature-rich messaging app built by Cameroonians, offering free chats, voice messages, group calls, file sharing, and unlimited cloud storage.",
         "website": "https://www.ondjoss.com",
-        "logo": "https://source.unsplash.com/100x100/?chat"
+        "logo": "https://i.ibb.co/B21sfxR0/Onjoss.png"
     },
     {
         "id": 19,
@@ -209,7 +200,7 @@
         "startDate": "2019",
         "description": "A networking platform that lets users create and exchange digital business cards instantly via NFC, eliminating the need for paper cards.",
         "website": "https://taaply.com",
-        "logo": "https://source.unsplash.com/100x100/?networking"
+        "logo": "https://i.ibb.co/xSCDqnMb/Taaply.png"
     },
     {
         "id": 20,
@@ -229,7 +220,7 @@
         "startDate": "2018",
         "description": "An agri-tech company that bridges farmers with urban buyers, providing improved inputs, training, and farm management solutions to boost productivity.",
         "website": "https://agrichubtech.com",
-        "logo": "https://source.unsplash.com/100x100/?farmers"
+        "logo": "https://i.ibb.co/HT19FQkF/agritech.png"
     },
     {
         "id": 22,
@@ -270,7 +261,39 @@
         "description": "A financial services platform offering quick, unsecured business loans and financial products to help African SMEs access working capital rapidly.",
         "website": "https://smecreditpro.com",
         "logo": "https://source.unsplash.com/100x100/?loan"
-    }
+    },
+    {
+        "id": 26,
+        "name": "Quesers",
+        "category": "edtech",
+        "location": "Buea",
+        "startDate": "2021",
+        "description": "An app where students access past exam questions and answers, and contributors can earn money by uploading authentic study materials.",
+        "website": "https://www.quesers.org",
+        "logo": "https://source.unsplash.com/100x100/?books"
+    },
+    {
+    "id": 27,
+    "name": "Traitz Tech",
+    "category": "Software development",
+    "location": "Bamenda",
+    "startDate": "2023",
+    "description": "Traitz Tech is a technology company based in Bamenda, Cameroon, that provides web and mobile application development, cloud computing, AI/ML, creative design, and digital marketing services to businesses.",
+    "website": "https://traitz.tech",
+    "logo": ""
+},
+{
+    "id": 28,
+    "name": "Bitsvalley Payments",
+    "category": "Fintech",
+    "location": "Douala",
+    "startDate": "2022",
+    "description": "Bitsvalley Payments is a fintech company based in Douala, Cameroon, offering integrated payment processing, point-of-sale (POS), and mobile banking solutions to businesses and financial institutions.",
+    "website": "http://bitsvalley.com",
+    "logo": ""
+}
+
+
 
 
 ]
