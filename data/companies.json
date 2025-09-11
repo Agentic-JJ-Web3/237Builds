@@ -9,6 +9,17 @@
         "website": "https://237-builds.netlify.app",
         "logo": "https://i.ibb.co/wrCmwsZ1/20250910-0117-Tech-Logo-Design-simple-compose-01k4rfm7tae22ateav6m7jhejh.png"
     },
+     {
+    "id": 1,
+    "name": "Innovate with SEED",
+    "category": "edtech",
+    "location": "Bamenda",
+    "startDate": "2024",
+    "description": "Innovate with SEED is a Bamenda-based IT training institute in Cameroon offering hands-on tech education programs, bootcamps, and community events to empower the next generation of African innovators through practical learning.",
+    "website": "https://innovatewithseed.com",
+    "logo": "/public/seed.svg"
+},
+
     {
         "id": 2,
         "name": "Freshbag",
@@ -19,17 +30,7 @@
         "website": "https://freshbag.shop",
         "logo": "https://i.ibb.co/sdSV0tm0/freshbag.png"
     },
-    {
-    "id": 1,
-    "name": "Innovate with SEED",
-    "category": "edtech",
-    "location": "Bamenda",
-    "startDate": "2024",
-    "description": "Innovate with SEED is a Bamenda-based IT training institute in Cameroon offering hands-on tech education programs, bootcamps, and community events to empower the next generation of African innovators through practical learning.",
-    "website": "https://innovatewithseed.com",
-    "logo": "/public/seed.svg"
-}
-,
+   
     {
         "id": 6,
         "name": "Aleigro Online Shopping Mall",
@@ -118,7 +119,7 @@
         "startDate": "2020",
         "description": "A licensed savings app helping users set and achieve financial goals with features like goal reminders and locked savings wallets for future needs.",
         "website": "https://mynkwa.com",
-        "logo": "https://source.unsplash.com/100x100/?savings"
+        "logo": "https://i.ibb.co/WWGrSKJd/Nkwa.png"
     },
     {
         "id": 11,
@@ -127,8 +128,8 @@
         "location": "Buea",
         "startDate": "2020",
         "description": "A personal finance mobile app that teaches budgeting and expense tracking to salary earners, helping them manage and optimize their spending habits.",
-        "website": "https://bohikor.com",
-        "logo": "https://source.unsplash.com/100x100/?budgeting"
+        "website": "https://www.linkedin.com/company/bohikor/?originalSubdomain=cm",
+        "logo": "https://i.ibb.co/mgd7D3S/bohiko.png"
     },
     {
         "id": 12,
@@ -138,7 +139,7 @@
         "startDate": "2022",
         "description": "A blockchain-powered mobile wallet enabling free, instant peer-to-peer money transfers worldwide, along with merchant and multicurrency features.",
         "website": "https://swychr.com",
-        "logo": "https://source.unsplash.com/100x100/?blockchain"
+        "logo": "https://i.ibb.co/5gvTzQS0/swychr.png"
     },
     {
         "id": 13,
