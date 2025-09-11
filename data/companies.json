@@ -1,5 +1,14 @@
 [
-
+    {
+        "id": 0,
+        "name": "237Builds",
+        "category": "community",
+        "location": "Remote",
+        "startDate": "2025",
+        "description": "An online platform and community showcasing Cameroon's tech ecosystem, startups, and resources to foster growth and collaboration.",
+        "website": "https://237-builds.vercel.app",
+        "logo": "https://i.ibb.co/wrCmwsZ1/20250910-0117-Tech-Logo-Design-simple-compose-01k4rfm7tae22ateav6m7jhejh.png"
+    },
     {
         "id": 1,
         "name": "Freshbag",
