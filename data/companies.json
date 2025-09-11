@@ -10,7 +10,7 @@
         "logo": "https://i.ibb.co/wrCmwsZ1/20250910-0117-Tech-Logo-Design-simple-compose-01k4rfm7tae22ateav6m7jhejh.png"
     },
     {
-        "id": 1,
+        "id": 2,
         "name": "Freshbag",
         "category": "agritech",
         "location": "Yaounde",
@@ -20,7 +20,18 @@
         "logo": "https://i.ibb.co/sdSV0tm0/freshbag.png"
     },
     {
-        "id": 2,
+    "id": 1,
+    "name": "Innovate with SEED",
+    "category": "edtech",
+    "location": "Bamenda",
+    "startDate": "2024",
+    "description": "Innovate with SEED is a Bamenda-based IT training institute in Cameroon offering hands-on tech education programs, bootcamps, and community events to empower the next generation of African innovators through practical learning.",
+    "website": "https://innovatewithseed.com",
+    "logo": "/public/seed.svg"
+}
+,
+    {
+        "id": 6,
         "name": "Aleigro Online Shopping Mall",
         "category": "ecommerce",
         "location": "Buea",
@@ -60,7 +71,7 @@
         "logo": "https://i.ibb.co/39r0pWv0/digolearn.png"
     },
     {
-        "id": 6,
+        "id": 26,
         "name": "Quesers",
         "category": "edtech",
         "location": "Buea",
@@ -77,7 +88,7 @@
         "startDate": "2020",
         "description": "A tech education initiative providing coding bootcamps, mentorship, and networking to empower young women and girls in Cameroon in STEM fields.",
         "website": "https://datagirltech.com",
-        "logo": "https://source.unsplash.com/100x100/?woman"
+        "logo": "https://i.ibb.co/Kjwhjx2T/DG.png"
     },
     {
         "id": 8,
@@ -87,7 +98,7 @@
         "startDate": "2020",
         "description": "A mobile investment platform enabling users to invest via their mobile money account in crypto and stocks, with interest-bearing savings plans.",
         "website": "https://ejara.io",
-        "logo": "https://source.unsplash.com/100x100/?finance"
+        "logo": "https://i.ibb.co/4RMbLmH9/ejara.png"
     },
     {
         "id": 9,
@@ -96,8 +107,8 @@
         "location": "Douala",
         "startDate": "2020",
         "description": "A neo-bank service operating through messaging platforms, offering free accounts and virtual cards with no fees or minimum balance requirements.",
-        "website": "https://www.paysika.com",
-        "logo": "https://source.unsplash.com/100x100/?banking"
+        "website": "https://www.paysika.co",
+        "logo": "https://i.ibb.co/gM8NCkWw/paysika.png"
     },
     {
         "id": 10,
