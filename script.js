@@ -83,12 +83,17 @@ loadStartups();
 
             // Category filters
             categoryFilters.forEach(filter => {
-                filter.addEventListener('click', handleCategoryFilter);
+                filter.addEventListener('click', (e) => {
+                    handleCategoryFilter(e);
+                    filterCompanies(); // Trigger combined filtering
+                });
             });
 
             // City filter
-            const cityFilter = document.getElementById('cityFilter');
-            cityFilter.addEventListener('change', filterCompanies);
+            const cityFilterElement = document.getElementById('cityFilter');
+            if (cityFilterElement) {
+                cityFilterElement.addEventListener('change', filterCompanies);
+            }
         }
 
         // Handle search functionality
@@ -143,13 +148,13 @@ loadStartups();
             renderStartups(filteredStartups);
         }
 
-        // Update filterCompanies to handle city filtering
+        // Update filterCompanies to ensure category and location filters work together
         function filterCompanies() {
             const categoryFilter = document.querySelector('.category-filter.active').dataset.category;
             const cityFilter = document.getElementById('cityFilter').value;
 
             filteredStartups = startups.filter(startup => {
-                const matchesCategory = categoryFilter === 'all' || startup.category.includes(categoryFilter);
+                const matchesCategory = categoryFilter === 'all' || startup.category === categoryFilter;
                 const matchesCity = !cityFilter || startup.location === cityFilter;
                 return matchesCategory && matchesCity;
             });
