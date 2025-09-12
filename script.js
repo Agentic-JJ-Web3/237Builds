@@ -148,14 +148,14 @@ loadStartups();
             renderStartups(filteredStartups);
         }
 
-        // Update filterCompanies to ensure category and location filters work together
+        // Update filterCompanies to handle 'All Cities' logic
         function filterCompanies() {
             const categoryFilter = document.querySelector('.category-filter.active').dataset.category;
             const cityFilter = document.getElementById('cityFilter').value;
 
             filteredStartups = startups.filter(startup => {
                 const matchesCategory = categoryFilter === 'all' || startup.category === categoryFilter;
-                const matchesCity = !cityFilter || startup.location === cityFilter;
+                const matchesCity = cityFilter === 'all' || startup.location === cityFilter;
                 return matchesCategory && matchesCity;
             });
 
