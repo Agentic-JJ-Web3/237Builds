@@ -1,5 +1,4 @@
-
-        .gradient-bg {
+.gradient-bg {
             background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
         }
         .dark .gradient-bg {
@@ -208,4 +207,34 @@
             box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
         }
 
-    
+        /* Custom styling for cityFilter dropdown */
+        #cityFilter {
+            width: 100%; /* Full width on mobile */
+            max-width: 300px; /* Limit width on larger screens */
+            padding: 0.75rem 1rem; /* Add padding for better touch targets */
+            font-size: 1rem; /* Ensure readability */
+            border: 2px solid #059669; /* Green border for visibility */
+            border-radius: 9999px; /* Fully rounded corners */
+            background-color: #f9fafb; /* Light background */
+            color: #374151; /* Dark text */
+            appearance: none; /* Remove default dropdown arrow */
+            background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23059669"%3E%3Cpath fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/%3E%3C/svg%3E');
+            background-repeat: no-repeat;
+            background-position: right 1rem center; /* Position the arrow */
+            background-size: 1.5rem; /* Size of the arrow */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        }
+
+        #cityFilter:focus {
+            border-color: #047857; /* Darker green on focus */
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.3); /* Green focus ring */
+            outline: none; /* Remove default outline */
+        }
+
+        /* Ensure dropdown fits well on smaller screens */
+        @media (max-width: 640px) {
+            #cityFilter {
+                max-width: 100%; /* Full width on small screens */
+            }
+        }
+
