@@ -3,7 +3,7 @@
         "id": 0,
         "name": "237Builds",
         "category": "community",
-        "location": "Remote",
+        "location": "all",
         "startDate": "2025",
         "description": "An online platform and community showcasing Cameroon's tech ecosystem, startups, and resources to foster growth and collaboration.",
         "website": "https://237-builds.netlify.app",
@@ -122,16 +122,7 @@
         "website": "https://www.linkedin.com/company/bohikor/?originalSubdomain=cm",
         "logo": "https://i.ibb.co/mgd7D3S/bohiko.png"
     },
-    {
-        "id": 12,
-        "name": "Swychr",
-        "category": "fintech",
-        "location": "London",
-        "startDate": "2022",
-        "description": "A blockchain-powered mobile wallet enabling free, instant peer-to-peer money transfers worldwide, along with merchant and multicurrency features.",
-        "website": "https://swychr.com",
-        "logo": "https://i.ibb.co/5gvTzQS0/swychr.png"
-    },
+  
     {
         "id": 13,
         "name": "Waspito",
@@ -275,7 +266,7 @@
     {
     "id": 27,
     "name": "Traitz Tech",
-    "category": "Software development",
+    "category": "technology",
     "location": "Bamenda",
     "startDate": "2023",
     "description": "Traitz Tech is a technology company based in Bamenda, Cameroon, that provides web and mobile application development, cloud computing, AI/ML, creative design, and digital marketing services to businesses.",
@@ -290,7 +281,7 @@
     "startDate": "2022",
     "description": "Bitsvalley Payments is a fintech company based in Douala, Cameroon, offering integrated payment processing, point-of-sale (POS), and mobile banking solutions to businesses and financial institutions.",
     "website": "http://bitsvalley.com",
-    "logo": ""
+    "logo": "https://i.ibb.co/m59KqZcg/Bitsvalley.png"
 }
 
 

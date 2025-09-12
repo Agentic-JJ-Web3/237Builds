@@ -17,12 +17,34 @@ async function loadStartups() {
 
         // Render the startups
         renderStartups(filteredStartups);
+
+        // Print cities in the console
+        printCities();
     } catch (error) {
-        console.error('Failed to load startups:', error);
+        logError('loadStartups', error);
     } finally {
         // Hide the loading state
         loadingElement.classList.add('hidden');
         startupsGrid.classList.remove('hidden');
+    }
+}
+
+// Print cities in the console
+function printCities() {
+    try {
+        const uniqueCities = [...new Set(startups.map(startup => startup.location).filter(city => city))];
+        uniqueCities.sort(); // Sort cities alphabetically
+        console.log('Unique Cities (Sorted):', uniqueCities);
+    } catch (error) {
+        logError('printCities', error);
+    }
+}
+
+// Centralized error logging function
+function logError(functionName, error, additionalData = null) {
+    console.error(`Error in ${functionName}:`, error);
+    if (additionalData) {
+        console.error('Additional Data:', additionalData);
     }
 }
 
@@ -45,6 +67,27 @@ loadStartups();
             setupEventListeners();
         }
 
+        // Populate city dropdown
+        function populateCityDropdown() {
+            try {
+                const cityFilter = document.getElementById('cityFilter');
+                const uniqueCities = [...new Set(startups.map(startup => startup.location).filter(city => city))];
+                console.log(uniqueCities);
+                uniqueCities.sort();
+                // Clear existing options
+                cityFilter.innerHTML = '<option value="all">All Cities</option>';
+
+                uniqueCities.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    option.textContent = city;
+                    cityFilter.appendChild(option);
+                });
+            } catch (error) {
+                logError('populateCityDropdown', error);
+            }
+        }
+
         // Setup event listeners
         function setupEventListeners() {
             // Search input
@@ -60,6 +103,12 @@ loadStartups();
             categoryFilters.forEach(filter => {
                 filter.addEventListener('click', handleCategoryFilter);
             });
+
+            // City filter
+            document.getElementById('cityFilter').addEventListener('change', filterCompanies);
+
+            // Clear filters button
+            document.getElementById('clearFilters').addEventListener('click', clearFilters);
         }
 
         // Handle search functionality
@@ -77,6 +126,20 @@ loadStartups();
                 );
             }
             
+            renderStartups(filteredStartups);
+        }
+
+        // Filter companies
+        function filterCompanies() {
+            const categoryFilter = document.querySelector('.category-filter.active').dataset.category;
+            const cityFilter = document.getElementById('cityFilter').value;
+
+            filteredStartups = startups.filter(startup => {
+                const matchesCategory = categoryFilter === 'all' || startup.category.includes(categoryFilter);
+                const matchesCity = cityFilter === 'all' || startup.location === cityFilter;
+                return matchesCategory && matchesCity;
+            });
+
             renderStartups(filteredStartups);
         }
 
@@ -111,6 +174,15 @@ loadStartups();
                 );
             }
             
+            renderStartups(filteredStartups);
+        }
+
+        // Clear all filters
+        function clearFilters() {
+            document.getElementById('cityFilter').value = 'all';
+            document.querySelector('.category-filter.active').classList.remove('active');
+            document.querySelector('[data-category="all"]').classList.add('active');
+            filteredStartups = [...startups];
             renderStartups(filteredStartups);
         }
 
