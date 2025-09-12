@@ -94,6 +94,12 @@ loadStartups();
             if (cityFilterElement) {
                 cityFilterElement.addEventListener('change', filterCompanies);
             }
+
+            // Clear filters button
+            const clearFiltersButton = document.getElementById('clearFilters');
+            if (clearFiltersButton) {
+                clearFiltersButton.addEventListener('click', clearFilters);
+            }
         }
 
         // Handle search functionality
@@ -225,6 +231,26 @@ loadStartups();
             document.querySelector('[data-category="all"]').classList.add('active', 'bg-green-600', 'text-white');
             document.querySelector('[data-category="all"]').classList.remove('bg-gray-200', 'text-gray-700');
             
+            renderStartups(filteredStartups);
+        }
+
+        // Clear all filters
+        function clearFilters() {
+            // Reset city filter to 'All Cities'
+            const cityFilter = document.getElementById('cityFilter');
+            if (cityFilter) {
+                cityFilter.value = 'all';
+            }
+
+            // Reset category filter to 'All Solutions'
+            categoryFilters.forEach(filter => {
+                filter.classList.remove('active', 'bg-green-600', 'text-white');
+                filter.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            document.querySelector('[data-category="all"]').classList.add('active', 'bg-green-600', 'text-white');
+
+            // Reset filtered startups to all startups
+            filteredStartups = [...startups];
             renderStartups(filteredStartups);
         }
 
