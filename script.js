@@ -47,7 +47,7 @@ function populateCityDropdown() {
             cityFilter.appendChild(option);
         });
     } catch (error) {
-        logError('populateCityDropdown', error);
+        console.error('Error populating city dropdown:', error);
     }
 }
 
@@ -85,6 +85,10 @@ loadStartups();
             categoryFilters.forEach(filter => {
                 filter.addEventListener('click', handleCategoryFilter);
             });
+
+            // City filter
+            const cityFilter = document.getElementById('cityFilter');
+            cityFilter.addEventListener('change', filterCompanies);
         }
 
         // Handle search functionality
@@ -136,6 +140,20 @@ loadStartups();
                 );
             }
             
+            renderStartups(filteredStartups);
+        }
+
+        // Update filterCompanies to handle city filtering
+        function filterCompanies() {
+            const categoryFilter = document.querySelector('.category-filter.active').dataset.category;
+            const cityFilter = document.getElementById('cityFilter').value;
+
+            filteredStartups = startups.filter(startup => {
+                const matchesCategory = categoryFilter === 'all' || startup.category.includes(categoryFilter);
+                const matchesCity = !cityFilter || startup.location === cityFilter;
+                return matchesCategory && matchesCity;
+            });
+
             renderStartups(filteredStartups);
         }
 
