@@ -13,7 +13,7 @@ Snapshot of the codebase as of commit `5dc21a7`. Stack: static `index.html` + `s
 | 5 | Obfuscated Cloudflare challenge-platform snippet appended at the end of the file | `script.js:279` | Looks like an accidental copy-paste (e.g. from viewing source of a Cloudflare-protected page); does nothing useful here and shouldn't be in source control |
 | 6 | Contact email inconsistent: README says `237builds@gmail.com`, footer CTA says `hello@237builds.cm` | `README.md` vs `index.html:215` | Confusing for contributors reaching out |
 | 7 | Page `<title>` says "CameroonBuilds"; everywhere else (header, footer, README) says "237Builds" | `index.html:6` | Branding inconsistency, hurts SEO/brand recall |
-| 8 | Tailwind loaded via `cdn.tailwindcss.com` runtime script | `index.html:7` | Not recommended for production by Tailwind itself — full framework shipped uncompiled, no purge, slower first paint |
+| ~~8~~ | ~~Tailwind loaded via `cdn.tailwindcss.com` runtime script~~ — **Fixed**: added Tailwind CLI build (`tailwind.config.js`, `src/tailwind.css`, `npm run build:css`), committed purged/minified `public/tailwind.css`, swapped the CDN `<script>` for a `<link>` | `index.html:7` | Was: full framework shipped uncompiled, no purge, slower first paint |
 
 ## No ranking logic exists
 

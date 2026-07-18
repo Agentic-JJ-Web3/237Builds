@@ -1,0 +1,26 @@
+{
+  "name": "237-builds",
+  "version": "1.0.0",
+  "description": "Welcome to 237Builds, a platform dedicated to showcasing and discovering amazing tech solutions built in Cameroon. This project aims to connect Cameroonian innovators with the local community, promoting homegrown talent and solving real-world problems in various sectors.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agentic-JJ-Web3/237Builds.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Agentic-JJ-Web3/237Builds/issues"
+  },
+  "homepage": "https://github.com/Agentic-JJ-Web3/237Builds#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
