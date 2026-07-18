@@ -114,16 +114,30 @@
             min-width: 100%;
         }
 
-        .logo-item {
-            font-size: 3rem;
-            opacity: 0.7;
+        .ecosystem-item {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            padding: 0.6rem 1.25rem;
+            border-radius: 9999px;
+            background: #f3f4f6;
+            color: #374151;
+            font-weight: 600;
+            opacity: 0.85;
             transition: all 0.3s ease;
             flex-shrink: 0;
         }
 
-        .logo-item:hover {
+        .dark .ecosystem-item {
+            background: #374151;
+            color: #f3f4f6;
+        }
+
+        .ecosystem-item:hover {
             opacity: 1;
-            transform: scale(1.2);
+            transform: scale(1.05);
+            background: #059669;
+            color: white;
         }
 
         @keyframes scroll {
