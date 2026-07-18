@@ -50,45 +50,11 @@ Commit the regenerated `public/tailwind.css` along with your other changes — i
 
 ## Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated** — including adding your own startup to the directory.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local setup, how to add a new startup, and the pull request workflow.
 
 Don't forget to give the project a star! Thanks again!
-
-### How to Contribute
-
-1. **Fork the Project**
-2. **Create your Feature Branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit your Changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push to the Branch** (`git push origin feature/AmazingFeature`)
-5. **Open a Pull Request**
-
-### Adding a New Startup
-
-To add a new startup to the platform, you can either:
-
-- **Contact us:** Send the startup details to [njeipierrick@gmail.com](mailto:njeipierrick@gmail.com) or reach out to us on our social media channels.
-- **Contribute via GitHub:**
-  1. Open the `data/companies.json` file.
-  2. Add a new startup object to the JSON array, following the existing format:
-     ```json
-     {
-         "id": 1,
-         "name": "Your Startup Name",
-         "category": "healthtech",
-         "location": "City, Cameroon",
-         "startDate": "YYYY",
-         "description": "A brief description of your startup.",
-         "website": "https://your-startup-website.com",
-         "logo": "URL to your startup's logo"
-     }
-     ```
-     `id` must be unique among all entries. `category` must be one of: `community`, `healthtech`, `edtech`, `agritech`, `technology`, `transport`, `fintech`, `ecommerce` (lowercase, exactly as spelled — this list is enforced by `data/companies.schema.json`).
-  3. **Uploading a Logo:** If you don't have a URL for your startup's logo, you can upload it for free on [imgbb.com](https://imgbb.com). After uploading, copy the direct link to the image (ensure it ends with `.png`, `.jpg`, or `.jpeg`) and use it as the `logo` value.
-  4. **Validate your entry:** run `npm install` then `npm run validate:data` to check `companies.json` against the schema before opening a PR. This catches typos in `category`, missing fields, duplicate `id`s, and malformed URLs.
-  5. Save your changes.
-  6. Create a pull request with your changes.
 
 ## License
 
