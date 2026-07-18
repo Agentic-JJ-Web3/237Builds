@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://237-builds.netlify.app/data/companies.schema.json",
+  "title": "237Builds Company Directory",
+  "description": "Schema for data/companies.json - one entry per startup shown on the site. Run `npm run validate:data` to check this file against it.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "name", "category", "location", "startDate", "description", "website", "logo"],
+    "properties": {
+      "id": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Unique identifier. Must not collide with any other entry's id (checked separately from schema validation)."
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "category": {
+        "type": "string",
+        "enum": ["community", "healthtech", "edtech", "agritech", "technology", "transport", "fintech", "ecommerce"],
+        "description": "Must exactly match one of the data-category values on the filter buttons in index.html (lowercase)."
+      },
+      "location": {
+        "type": "string",
+        "minLength": 1
+      },
+      "startDate": {
+        "type": "string",
+        "pattern": "^[0-9]{4}$",
+        "description": "Four-digit year, e.g. \"2024\"."
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1
+      },
+      "website": {
+        "type": "string",
+        "pattern": "^https?://.+"
+      },
+      "logo": {
+        "type": "string",
+        "pattern": "^(|https?://.+|/.+)$",
+        "description": "Absolute http(s) URL, a site-relative path starting with '/', or an empty string."
+      }
+    }
+  }
+}

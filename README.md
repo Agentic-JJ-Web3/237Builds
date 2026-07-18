@@ -74,9 +74,9 @@ To add a new startup to the platform, you can either:
   2. Add a new startup object to the JSON array, following the existing format:
      ```json
      {
-         "id": 1, // Make sure to use a unique ID
+         "id": 1,
          "name": "Your Startup Name",
-         "category": "Your Category", // e.g., "healthtech", "edtech", "agritech" etc.
+         "category": "healthtech",
          "location": "City, Cameroon",
          "startDate": "YYYY",
          "description": "A brief description of your startup.",
@@ -84,9 +84,11 @@ To add a new startup to the platform, you can either:
          "logo": "URL to your startup's logo"
      }
      ```
+     `id` must be unique among all entries. `category` must be one of: `community`, `healthtech`, `edtech`, `agritech`, `technology`, `transport`, `fintech`, `ecommerce` (lowercase, exactly as spelled — this list is enforced by `data/companies.schema.json`).
   3. **Uploading a Logo:** If you don't have a URL for your startup's logo, you can upload it for free on [imgbb.com](https://imgbb.com). After uploading, copy the direct link to the image (ensure it ends with `.png`, `.jpg`, or `.jpeg`) and use it as the `logo` value.
-  4. Save your changes.
-  5. Create a pull request with your changes.
+  4. **Validate your entry:** run `npm install` then `npm run validate:data` to check `companies.json` against the schema before opening a PR. This catches typos in `category`, missing fields, duplicate `id`s, and malformed URLs.
+  5. Save your changes.
+  6. Create a pull request with your changes.
 
 ## License
 
