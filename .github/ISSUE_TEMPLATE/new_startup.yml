@@ -1,0 +1,67 @@
+name: New Startup Submission
+description: Submit a Cameroonian startup to be added to the directory (if you'd rather not open a PR yourself)
+title: "[New Startup]: "
+labels: ["new-startup"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prefer to add it yourself? See [CONTRIBUTING.md](https://github.com/Agentic-JJ-Web3/237Builds/blob/main/CONTRIBUTING.md#adding-a-new-startup) for the direct PR route — it's usually faster.
+  - type: input
+    id: name
+    attributes:
+      label: Startup name
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Must match one of the categories supported by the site's filters.
+      options:
+        - community
+        - healthtech
+        - edtech
+        - agritech
+        - technology
+        - transport
+        - fintech
+        - ecommerce
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: e.g. Buea, Cameroon
+    validations:
+      required: true
+  - type: input
+    id: startDate
+    attributes:
+      label: Start year
+      placeholder: e.g. 2023
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Brief description
+      description: One or two sentences on what the startup does.
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Website
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: logo
+    attributes:
+      label: Logo URL
+      description: A direct image link. If you don't have one, upload it free on imgbb.com first.
+      placeholder: https://...
+    validations:
+      required: false

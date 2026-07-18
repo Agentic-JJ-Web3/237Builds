@@ -24,7 +24,7 @@ Startups render in raw JSON array order (= insertion order). The project's own e
 - ~~No JSON Schema for `companies.json`~~ — **Fixed**: added `data/companies.schema.json` (enforces the exact category enum, required fields, URL shape) plus `scripts/validate-companies.js` (also catches duplicate `id`s, which JSON Schema alone can't express) run via `npm run validate:data`. Would have caught #1 and #2 above.
 - ~~No CI at all~~ — **Fixed**: `.github/workflows/validate-data.yml` runs `npm run validate:data` on every push/PR to `main`, so a bad `category` typo or duplicate `id` now fails the check instead of merging silently.
 - ~~No `CONTRIBUTING.md`~~ — **Fixed**: added `CONTRIBUTING.md` with local setup, the data-validation workflow, and the PR steps; README's Contributing section now just links to it.
-- No PR/issue templates.
+- ~~No PR/issue templates~~ — **Fixed**: added `.github/pull_request_template.md` and issue forms under `.github/ISSUE_TEMPLATE/` (bug report, feature request, new-startup submission with a category dropdown matching the schema enum).
 - Contributors must hand-pick a unique `id`, which guarantees merge conflicts when two PRs land close together. (Duplicate `id`s are now at least caught by validation before merge.)
 
 ## No internationalization

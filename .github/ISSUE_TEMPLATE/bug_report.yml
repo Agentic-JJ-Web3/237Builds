@@ -1,0 +1,37 @@
+name: Bug Report
+description: Something on the site is broken (wrong filter results, broken link, broken logo, etc.)
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what actually happened instead?
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Where on the site?
+      description: URL, or which section/filter/card.
+      placeholder: e.g. https://237-builds.netlify.app, "Health" filter
+    validations:
+      required: false
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Click '...'
+        3. See error
+    validations:
+      required: false
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / device
+      placeholder: e.g. Chrome 126 on Windows, Safari on iPhone
+    validations:
+      required: false
