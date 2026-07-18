@@ -53,7 +53,7 @@ Don't forget to give the project a star! Thanks again!
 
 To add a new startup to the platform, you can either:
 
-- **Contact us:** Send the startup details to [237builds@gmail.com](mailto:237builds@gmail.com) or reach out to us on our social media channels.
+- **Contact us:** Send the startup details to [njeipierrick@gmail.com](mailto:njeipierrick@gmail.com) or reach out to us on our social media channels.
 - **Contribute via GitHub:**
   1. Open the `data/companies.json` file.
   2. Add a new startup object to the JSON array, following the existing format:
