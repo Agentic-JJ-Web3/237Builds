@@ -1,0 +1,45 @@
+# 237Builds — Codebase Findings (2026-07-18)
+
+Snapshot of the codebase as of commit `5dc21a7`. Stack: static `index.html` + `script.js` (vanilla JS) + `data/companies.json`, Tailwind via CDN, hosted on Netlify.
+
+## Confirmed bugs
+
+| # | Issue | Location | Impact |
+|---|-------|----------|--------|
+| 1 | Health filter button uses `data-category="heltech"` but every health entry in the data is `"healthtech"` | `index.html:61` vs `data/companies.json` | Clicking "🏥 Health" always returns 0 results — a whole category is unreachable |
+| 2 | `Bitsvalley Payments` has `"category": "Fintech"` (capital F); filtering is case-sensitive and the button uses `"fintech"` | `data/companies.json`, `index.html:77` | Entry silently disappears from the FinTech filter |
+| 3 | `/public/seed.svgr` (typo, extra "r") used for two partner logos | `index.html:153`, `index.html:188` | Broken image, falls back to hidden alt text |
+| 4 | "Partners" carousel links to Google, AWS, Stripe, Microsoft, Y Combinator, Slack, GitHub, Salesforce, Shopify homepages, all rendered with the same placeholder logo | `index.html:130-195` | Misleading — implies partnerships that don't exist; potential trademark concern |
+| 5 | Obfuscated Cloudflare challenge-platform snippet appended at the end of the file | `script.js:279` | Looks like an accidental copy-paste (e.g. from viewing source of a Cloudflare-protected page); does nothing useful here and shouldn't be in source control |
+| 6 | Contact email inconsistent: README says `237builds@gmail.com`, footer CTA says `hello@237builds.cm` | `README.md` vs `index.html:215` | Confusing for contributors reaching out |
+| 7 | Page `<title>` says "CameroonBuilds"; everywhere else (header, footer, README) says "237Builds" | `index.html:6` | Branding inconsistency, hurts SEO/brand recall |
+| 8 | Tailwind loaded via `cdn.tailwindcss.com` runtime script | `index.html:7` | Not recommended for production by Tailwind itself — full framework shipped uncompiled, no purge, slower first paint |
+
+## No ranking logic exists
+
+Startups render in raw JSON array order (= insertion order). The project's own entry (`id: 0`, 237Builds) is first. There is no `dateAdded`, no popularity signal, nothing that makes the order defensible — it currently looks like "whoever the maintainer likes is on top."
+
+## No contribution safety net
+
+- No JSON Schema for `companies.json` — nothing stops a typo like #1 or #2 above from merging.
+- No CI at all (no `.github/workflows`).
+- No `CONTRIBUTING.md` — steps live only in the README.
+- No PR/issue templates.
+- Contributors must hand-pick a unique `id`, which guarantees merge conflicts when two PRs land close together.
+- No local validation script contributors can run before opening a PR.
+
+## No internationalization
+
+All UI copy is hard-coded English strings in `index.html`. No locale files, no language switcher, no routing per locale.
+
+## Other gaps worth addressing as the project grows
+
+- No startup detail pages — cards link straight out to the external site, no room for a fuller story (team, funding stage, tags).
+- No sorting control in the UI.
+- No "report broken link/logo" mechanism — link rot will only ever be caught by maintainers.
+- No sitemap or per-page meta descriptions (discovery is the whole point of the project).
+- No analytics — no visibility into what devs actually search/filter for.
+- No `package.json` / build tooling / tests / linting of any kind.
+
+---
+*This file is a living record — update it as items are resolved or new issues are found, rather than creating a new findings doc each time.*
