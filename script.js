@@ -56,6 +56,7 @@ loadStartups();
        
 
         let filteredStartups = [...startups];
+        let currentSort = 'name-asc';
 
         // DOM elements
         const searchInput = document.getElementById('searchInput');
@@ -93,6 +94,15 @@ loadStartups();
             const cityFilterElement = document.getElementById('cityFilter');
             if (cityFilterElement) {
                 cityFilterElement.addEventListener('change', filterCompanies);
+            }
+
+            // Sort control
+            const sortSelectElement = document.getElementById('sortSelect');
+            if (sortSelectElement) {
+                sortSelectElement.addEventListener('change', (e) => {
+                    currentSort = e.target.value;
+                    renderStartups(filteredStartups);
+                });
             }
 
             // Clear filters button
@@ -168,20 +178,42 @@ loadStartups();
             renderStartups(filteredStartups);
         }
 
+        // Sort a list of startups according to the current sort selection
+        function sortStartups(list) {
+            const sorted = [...list];
+            switch (currentSort) {
+                case 'name-desc':
+                    sorted.sort((a, b) => b.name.localeCompare(a.name, 'en', { sensitivity: 'base' }));
+                    break;
+                case 'founded-newest':
+                    sorted.sort((a, b) => b.startDate.localeCompare(a.startDate));
+                    break;
+                case 'founded-oldest':
+                    sorted.sort((a, b) => a.startDate.localeCompare(b.startDate));
+                    break;
+                case 'name-asc':
+                default:
+                    sorted.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+            }
+            return sorted;
+        }
+
         // Render startup cards
         function renderStartups(startupsToRender) {
+            startupsToRender = sortStartups(startupsToRender);
+
             // Update results counter
             resultsCounter.innerHTML = `Showing <span class="font-semibold text-green-600">${startupsToRender.length}</span> Cameroonian startup${startupsToRender.length !== 1 ? 's' : ''}`;
-            
+
             if (startupsToRender.length === 0) {
                 startupsGrid.classList.add('hidden');
                 noResults.classList.remove('hidden');
                 return;
             }
-            
+
             startupsGrid.classList.remove('hidden');
             noResults.classList.add('hidden');
-            
+
             startupsGrid.innerHTML = startupsToRender.map(startup => `
                 <div class="startup-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 transition-colors duration-300">
                     <div class="p-6">
