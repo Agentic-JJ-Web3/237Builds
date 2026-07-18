@@ -61,7 +61,7 @@ To add a new startup to the platform, you can either:
      {
          "id": 1, // Make sure to use a unique ID
          "name": "Your Startup Name",
-         "category": "Your Category", // e.g., "heltech", "edtech","agritech" etc.
+         "category": "Your Category", // e.g., "healthtech", "edtech", "agritech" etc.
          "location": "City, Cameroon",
          "startDate": "YYYY",
          "description": "A brief description of your startup.",
