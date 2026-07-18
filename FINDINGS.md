@@ -15,13 +15,18 @@ Snapshot of the codebase as of commit `5dc21a7`. Stack: static `index.html` + `s
 | 7 | Page `<title>` says "CameroonBuilds"; everywhere else (header, footer, README) says "237Builds" | `index.html:6` | Branding inconsistency, hurts SEO/brand recall |
 | ~~8~~ | ~~Tailwind loaded via `cdn.tailwindcss.com` runtime script~~ — **Fixed**: added Tailwind CLI build (`tailwind.config.js`, `src/tailwind.css`, `npm run build:css`), committed purged/minified `public/tailwind.css`, swapped the CDN `<script>` for a `<link>` | `index.html:7` | Was: full framework shipped uncompiled, no purge, slower first paint |
 
-## ~~No ranking logic exists~~
+## ~~No ranking logic exists~~ / ~~No sorting control in the UI~~
 
-**Fixed**: `script.js` now sorts `startups` alphabetically by `name` (case-insensitive, `localeCompare`) once right after loading `data/companies.json`, before any filtering/search happens. Every other view (category filter, city filter, search results) derives from that same array via `.filter()` or a spread, so the order is inherited everywhere without needing to touch each function separately.
+**Fixed**: `renderStartups()` in `script.js` now sorts whatever list it's given (`sortStartups()`) according to a `currentSort` mode before drawing cards, defaulting to alphabetical by `name`. Because every filter/search path (category, city, search box) already funnels through `renderStartups()`, the sort applies consistently no matter which combination of filters is active — no need to touch each filter function separately.
 
-This replaces raw JSON insertion order with a rule that's deterministic and auditable by any contributor — no `dateAdded` or popularity data was needed. `237Builds` (`id: 0`) still happens to render first, but only because `"237Builds"` starts with a digit, which sorts before letters — not because of special-casing.
+A `<select id="sortSelect">` next to the city filter lets visitors switch between:
+- Name (A–Z) — default
+- Name (Z–A)
+- Newest founded / Oldest founded — using the existing, schema-required `startDate` field (no new data needed)
 
-A future "Newest" or "Featured" sort would still need real `dateAdded`/popularity data and a UI control to switch modes — that's a separate, larger feature (see "No sorting control in the UI" below), not part of this fix.
+This replaces raw JSON insertion order with a rule that's deterministic and auditable by any contributor. `237Builds` (`id: 0`) still happens to render first under the default sort, but only because `"237Builds"` starts with a digit, which sorts before letters — not because of special-casing.
+
+A "Featured" or true "date added" sort would still need real popularity/`dateAdded` data that doesn't exist yet — out of scope here.
 
 ## No contribution safety net
 
@@ -38,7 +43,6 @@ All UI copy is hard-coded English strings in `index.html`. No locale files, no l
 ## Other gaps worth addressing as the project grows
 
 - No startup detail pages — cards link straight out to the external site, no room for a fuller story (team, funding stage, tags).
-- No sorting control in the UI.
 - No "report broken link/logo" mechanism — link rot will only ever be caught by maintainers.
 - No sitemap or per-page meta descriptions (discovery is the whole point of the project).
 - No analytics — no visibility into what devs actually search/filter for.

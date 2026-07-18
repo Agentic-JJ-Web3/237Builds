@@ -221,8 +221,8 @@
             box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
         }
 
-        /* Custom styling for cityFilter dropdown */
-        #cityFilter {
+        /* Custom styling for cityFilter and sortSelect dropdowns */
+        #cityFilter, #sortSelect {
             width: 100%; /* Full width on mobile */
             max-width: 300px; /* Limit width on larger screens */
             padding: 0.75rem 1rem; /* Add padding for better touch targets */
@@ -239,7 +239,7 @@
             transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
         }
 
-        #cityFilter:focus {
+        #cityFilter:focus, #sortSelect:focus {
             border-color: #047857; /* Darker green on focus */
             box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.3); /* Green focus ring */
             outline: none; /* Remove default outline */
@@ -247,7 +247,7 @@
 
         /* Ensure dropdown fits well on smaller screens */
         @media (max-width: 640px) {
-            #cityFilter {
+            #cityFilter, #sortSelect {
                 max-width: 100%; /* Full width on small screens */
             }
         }
