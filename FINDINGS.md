@@ -22,7 +22,7 @@ Startups render in raw JSON array order (= insertion order). The project's own e
 ## No contribution safety net
 
 - ~~No JSON Schema for `companies.json`~~ — **Fixed**: added `data/companies.schema.json` (enforces the exact category enum, required fields, URL shape) plus `scripts/validate-companies.js` (also catches duplicate `id`s, which JSON Schema alone can't express) run via `npm run validate:data`. Would have caught #1 and #2 above.
-- No CI at all (no `.github/workflows`) — the new `npm run validate:data` isn't wired into CI yet, so it only runs if a contributor remembers to run it locally.
+- ~~No CI at all~~ — **Fixed**: `.github/workflows/validate-data.yml` runs `npm run validate:data` on every push/PR to `main`, so a bad `category` typo or duplicate `id` now fails the check instead of merging silently.
 - No `CONTRIBUTING.md` — steps live only in the README.
 - No PR/issue templates.
 - Contributors must hand-pick a unique `id`, which guarantees merge conflicts when two PRs land close together. (Duplicate `id`s are now at least caught by validation before merge.)
