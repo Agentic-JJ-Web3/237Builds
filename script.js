@@ -227,20 +227,25 @@ loadStartups();
                             </span>
                         </div>
                         
-                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">${startup.name}</h3>
-                        
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                            <a href="detail.html?id=${startup.id}" class="hover:text-green-600 dark:hover:text-green-400 transition-colors">${startup.name}</a>
+                        </h3>
+
                         <div class="flex items-center text-gray-600 dark:text-gray-400 text-sm mb-3">
                             <span class="mr-4">📍 ${startup.location}</span>
                             <span>📅 ${startup.startDate}</span>
                         </div>
-                        
+
                         <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">${startup.description}</p>
-                        
-                        <div class="flex items-center justify-between">
+
+                        <div class="flex flex-wrap items-center gap-2">
+                            <a href="detail.html?id=${startup.id}" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                Details
+                            </a>
                             <a href="${startup.website}" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                                 Visit Website →
                             </a>
-                            <button onclick="shareStartup('${startup.name}', '${startup.website}')" class="text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+                            <button onclick="shareStartup('${startup.name}', '${startup.website}')" class="ml-auto text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">
                                 📤 Share
                             </button>
                         </div>

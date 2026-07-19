@@ -12,6 +12,7 @@ Welcome to 237Builds, a platform dedicated to showcasing and discovering amazing
 - Filter solutions by categories such as health, education, agriculture, transport, fintech, and e-commerce.
 - Search for specific startups, solutions, or problems.
 - Learn more about each startup, including their location, start date, and a brief description.
+- View a dedicated detail page for each startup (tags, team, and funding stage, when provided) via the "Details" link on each card.
 - Visit the startup's website for more information.
 
 The project is built with HTML, Tailwind CSS, and vanilla JavaScript. It's designed to be a community-driven platform where developers can contribute and help grow the ecosystem of Cameroonian tech.

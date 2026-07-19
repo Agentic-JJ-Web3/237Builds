@@ -64,6 +64,7 @@ You can either:
      - `category` must be exactly one of: `community`, `healthtech`, `edtech`, `agritech`, `technology`, `transport`, `fintech`, `ecommerce` (lowercase, as spelled — enforced by `data/companies.schema.json`).
      - `website` must be a full `http(s)://` URL.
      - `logo` must be a full `http(s)://` URL, a site-relative path starting with `/`, or an empty string.
+     - Optional fields shown on the startup's detail page (`detail.html`) if you provide them: `tags` (array of short keywords, e.g. `["B2B", "mobile money"]`), `team` (array of strings, e.g. `["Jane Doe - CEO"]`), `fundingStage` (freeform string, e.g. `"Seed"`).
   3. **Uploading a logo:** if you don't have a URL for your startup's logo, upload it for free on [imgbb.com](https://imgbb.com), then use the direct image link (ending in `.png`, `.jpg`, or `.jpeg`) as the `logo` value.
   4. Run `npm run validate:data` and fix anything it flags.
   5. Open a pull request.

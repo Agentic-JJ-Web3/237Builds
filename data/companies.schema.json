@@ -45,6 +45,22 @@
         "type": "string",
         "pattern": "^(|https?://.+|/.+)$",
         "description": "Absolute http(s) URL, a site-relative path starting with '/', or an empty string."
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "uniqueItems": true,
+        "description": "Optional. Short keywords shown on the startup's detail page, e.g. [\"B2B\", \"mobile money\"]."
+      },
+      "team": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "description": "Optional. Team members shown on the detail page, e.g. [\"Jane Doe - CEO\"]."
+      },
+      "fundingStage": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Optional. Freeform, e.g. \"Bootstrapped\", \"Seed\", \"Series A\"."
       }
     }
   }

@@ -65,3 +65,30 @@ body:
       placeholder: https://...
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: |
+        The fields below are optional and appear on the startup's detail page if you fill them in.
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated short keywords.
+      placeholder: e.g. B2B, mobile money, marketplace
+    validations:
+      required: false
+  - type: input
+    id: team
+    attributes:
+      label: Team
+      description: Comma-separated, e.g. "name - role".
+      placeholder: e.g. Jane Doe - CEO, John Smith - CTO
+    validations:
+      required: false
+  - type: input
+    id: fundingStage
+    attributes:
+      label: Funding stage
+      placeholder: e.g. Bootstrapped, Seed, Series A
+    validations:
+      required: false

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>237Builds - Startup Details</title>
+    <link rel="stylesheet" href="./public/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./public/styles.css">
+    <meta name="description" content="Details about a Cameroonian startup featured on 237Builds.">
+    <meta name="author" content="237Builds">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <header class="bg-white dark:bg-gray-800 shadow-sm border-b dark:border-gray-700 transition-colors duration-300">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-gray-800 dark:text-white font-bold text-lg">
+                <span>🇨🇲</span>
+                <span><span class="text-green-500">237</span><span class="text-red-500">Bui</span><span class="text-yellow-500">lds</span></span>
+            </a>
+            <a href="index.html" class="text-green-600 dark:text-green-400 hover:underline flex items-center gap-1">
+                <i class="fas fa-arrow-left"></i> All Startups
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-10">
+        <div id="loading" class="text-center text-gray-500 dark:text-gray-400 py-16">
+            <p>Loading startup...</p>
+        </div>
+
+        <div id="notFound" class="hidden text-center py-16">
+            <div class="text-6xl mb-4">🔍</div>
+            <h1 class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-2">Startup not found</h1>
+            <p class="text-gray-500 dark:text-gray-400 mb-6">It may have been removed, or the link is incorrect.</p>
+            <a href="index.html" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition-colors inline-block">Back to all startups</a>
+        </div>
+
+        <article id="startupDetail" class="hidden max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
+            <div class="p-8">
+                <div class="flex items-start justify-between mb-6 gap-4">
+                    <div class="logo-container">
+                        <img id="detailLogo" src="" alt="" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <span id="detailCategory" class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm font-medium px-3 py-1 rounded-full"></span>
+                </div>
+
+                <h1 id="detailName" class="text-3xl font-bold text-gray-800 dark:text-white mb-2"></h1>
+
+                <div class="flex items-center flex-wrap gap-4 text-gray-600 dark:text-gray-400 text-sm mb-6">
+                    <span id="detailLocation"></span>
+                    <span id="detailStartDate"></span>
+                </div>
+
+                <p id="detailDescription" class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed"></p>
+
+                <div id="detailTagsWrap" class="hidden mb-6">
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Tags</h2>
+                    <div id="detailTags" class="flex flex-wrap gap-2"></div>
+                </div>
+
+                <div id="detailTeamWrap" class="hidden mb-6">
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Team</h2>
+                    <ul id="detailTeam" class="text-gray-600 dark:text-gray-300 space-y-1"></ul>
+                </div>
+
+                <div id="detailFundingWrap" class="hidden mb-6">
+                    <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Funding Stage</h2>
+                    <p id="detailFunding" class="text-gray-600 dark:text-gray-300"></p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-4 border-t dark:border-gray-700">
+                    <a id="detailWebsite" href="#" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-colors">
+                        Visit Website →
+                    </a>
+                    <button id="detailShare" class="ml-auto text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+                        📤 Share
+                    </button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white transition-colors duration-300 mt-16">
+        <div class="container mx-auto px-4 py-8 text-center text-gray-400 text-sm">
+            Built with ❤️ in Bamenda, Cameroon • <a href="index.html" class="text-green-400 hover:text-green-300 transition-colors">Back to 237Builds</a>
+        </div>
+    </footer>
+
+    <script type="module" src="detail.js"></script>
+</body>
+</html>

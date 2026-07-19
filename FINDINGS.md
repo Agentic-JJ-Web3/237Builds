@@ -42,7 +42,7 @@ All UI copy is hard-coded English strings in `index.html`. No locale files, no l
 
 ## Other gaps worth addressing as the project grows
 
-- No startup detail pages — cards link straight out to the external site, no room for a fuller story (team, funding stage, tags).
+- ~~No startup detail pages~~ — **Fixed**: added `detail.html` + `detail.js`, a per-startup page reached via a new "Details" link on each card (and the card's title) at `detail.html?id=<id>`. Shows the full (untruncated) description plus three new optional `data/companies.json` fields — `tags`, `team`, `fundingStage` — none required, so all 28 existing entries validate unchanged. Renders with `textContent`/`createElement` rather than `innerHTML` interpolation for the contributor-supplied fields, since this data now also arrives via the "New Startup Submission" issue form. `tailwind.config.js`'s content scan was extended to include the two new files so their utility classes get compiled into `public/tailwind.css`.
 - No "report broken link/logo" mechanism — link rot will only ever be caught by maintainers.
 - No sitemap or per-page meta descriptions (discovery is the whole point of the project).
 - No analytics — no visibility into what devs actually search/filter for.
